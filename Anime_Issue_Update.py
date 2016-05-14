@@ -3,7 +3,6 @@
 from selenium import webdriver
 import smtplib
 import logging
-import os
 
 class WebDriver():
 	def __init__(self, link="", driver = webdriver.Firefox(), element=[], chapters=[]):
