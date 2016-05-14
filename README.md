@@ -11,9 +11,9 @@ This Python script will scrape www.mangapanda.com for any anime you wish to know
 6. Enjoy!
 
 ## Required Packages
-* selenium
-* smtplib
-* logging
+* sudo pip install selenium
+* sudo pip install smtplib
+* sudo pip install logging
 
 ## Usage
 
