@@ -1,12 +1,8 @@
 # This script checks http://www.mangapanda.com/ to test when a new volume of anime is released.
 
 from selenium import webdriver
-import os
-import time
 import smtplib
 import logging
-import regex as re
-from datetime import datetime, date
 
 class WebDriver():
 	def __init__(self, link="", driver = webdriver.Firefox(), element=[], chapters=[]):
