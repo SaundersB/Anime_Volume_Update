@@ -1,4 +1,4 @@
-# This script checks open access to test when a case had changed its status.
+# This script checks http://www.mangapanda.com/ to test when a new volume of anime is released.
 
 from selenium import webdriver
 import os
