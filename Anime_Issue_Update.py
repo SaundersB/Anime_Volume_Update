@@ -3,6 +3,7 @@
 from selenium import webdriver
 import smtplib
 import logging
+import os
 
 class WebDriver():
 	def __init__(self, link="", driver = webdriver.Firefox(), element=[], chapters=[]):
@@ -94,12 +95,23 @@ class Anime():
 	# Reads all lines of the anime file, sorts them, and then selects the greatest value.
 	def readNewestIssueInFile(self):
 		lines=[]
-		f = open(self.anime_file, 'r+')
-		for line in f:
-			print(line)
-			lines.append(self.convertStr(line))
+		try:
+		    with open(self.anime_file, "r+") as f:
+			    for line in f:
+				print(line)
+				lines.append(self.convertStr(line))
+		
+		        # do whatever
+		except IOError:
+		    with open(self.anime_file, "w+") as f:
+		    	for line in f:
+				print(line)
+				lines.append(self.convertStr(line))
+
 		f.close()
 		lines.sort()
+		#f = open(self.anime_file, 'r+')
+		
 		#print("Lines read in file: ", lines)
 		if len(lines) <= 0:
 			return 0
