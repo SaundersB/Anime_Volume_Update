@@ -46,7 +46,7 @@ class Anime():
 		self.logging = logging
 
 	def convertStr(self, s):
-		# Convert string to float. If there is an error set it to 0 int.
+		# Convert string to int. If there is an error set it to 0 int.
 	    try:
 	        ret = int(s)
 	    except ValueError:
