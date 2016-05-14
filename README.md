@@ -7,7 +7,7 @@ This Python script will scrape www.mangapanda.com for any anime you wish to know
 2. Edit the phone number, cell phone carrier, gmail username and password. If you want to use another carrier other than AT&T or email provider other than gmail you'll have to change those.
 3. Edit the usage of the WebDriver, Text, and Anime classes. If you want to track a different anime just make sure to pass in the correct url, anime name, and tracking file.
 4. `crontab -e`
-5. Append the line: `00 21 * * * /Users/username/Anime_Volume_Update/Anime_Issue_Update.py` (You can change the frequency however you want).
+5. Append the line: `00 21 * * * cd /Users/username/Anime_Volume_Update/; python Anime_Issue_Update.py` (You can change the frequency however you want).
 6. Enjoy!
 
 ## Required Packages
