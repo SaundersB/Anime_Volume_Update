@@ -10,6 +10,10 @@ This Python script will scrape www.mangapanda.com for any anime you wish to know
 5. Append the line: `00 21 * * * /Users/username/Anime_Volume_Update/Anime_Issue_Update.py` (You can change the frequency however you want).
 6. Enjoy!
 
+## Required Packages
+* selenium
+* smtplib
+* logging
 
 ## Usage
 
