@@ -110,6 +110,9 @@ class Anime():
 		return str(item).replace("[","").replace("]","")
 
 
+# Main()
+# Change the link, file name, and anime name to run on any anime you wish on mangapanda.
+
 DRAGON_BALL_SUPER_LINK="http://www.mangapanda.com/dragon-ball-super"
 RECENT_MANGA_XPATH='//*[@id="latestchapters"]/ul'
 TAG='li'
