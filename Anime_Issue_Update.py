@@ -66,15 +66,21 @@ class Anime():
 		previous_most_recent_file = self.readNewestIssueInFile()
 
 		print("Comparing previously recorded values vs. obtains value")
-		print(int(most_recent_volume_current), ">", int(previous_most_recent_file))
-		if (int(most_recent_volume_current) > int(previous_most_recent_file)):
+		print(str(most_recent_volume[0]) + " vs " + str(previous_most_recent_file))
+
+		if(len(str(most_recent_volume_current)) == 0):
+			print("Empty string")
+			return
+
+		print(str(most_recent_volume[0]) + ">" + str(previous_most_recent_file))
+		if (int(most_recent_volume[0]) > int(previous_most_recent_file)):
 			print("There is a new volume out")
 			self.writeToFile(most_recent_volume_current)
 			print("Newest issue reads: ", self.readNewestIssueInFile())
 			text_message = Text()
-			message=self.anime_name + " " + most_recent_volume_current
+			message=self.anime_name + " " + str(most_recent_volume[0])
 			text_message.sendText(message)
-			logging.info(self.anime_name + ", New Volume: " + most_recent_volume_name)
+			logging.info(self.anime_name + ", New Volume: " + str(most_recent_volume[0]))
 		else:
 			print("No new volume")
 			print("Current volume at: ", previous_most_recent_file)
